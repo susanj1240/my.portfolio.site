@@ -1,0 +1,267 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #282d3c;
+  font-family: "Times New Roman", Times, serif;
+  margin: 0px;
+}
+
+#credit {
+  color: rgb(202, 202, 202);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#credit a {
+  color: rgb(202, 202, 202);
+}
+#credit a:visited {
+  color: rgb(202, 202, 202);
+}
+
+.container {
+  padding: 30px 70px;
+}
+h1 {
+  color: rgb(202, 202, 202);
+
+  /* animation */
+  animation-duration: 2s;
+  animation-name: slidein;
+  margin-bottom: 5px;
+}
+
+#myTitle {
+  color: rgb(202, 202, 202);
+  font-size: 14px;
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+
+/* Key Frames Animation */
+@keyframes slidein {
+  from {
+    margin-left: 15%;
+    opacity: 0;
+  }
+
+  10% {
+    animation-duration: 1.7s;
+  }
+
+  to {
+    margin-left: 0%;
+    opacity: 100%;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    /* width: 50vh; */
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.wrapper:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Profile Image */
+.profileImgWrapper {
+  /* width: 70vh; */
+  width: 50%;
+  overflow: hidden;
+  float: left;
+  margin-right: 30px;
+}
+
+.profileImg {
+  width: 70vh;
+  height: 60vh;
+  object-fit: cover;
+  animation-name: fadeInFromLeft;
+  animation-duration: 2s;
+}
+
+@keyframes fadeInFromLeft {
+  from {
+    transform: scale(1.2);
+    opacity: 0.1;
+    margin-left: -50%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+/* Connect Btn:Github, LinkedIn */
+.connectBtnWrapper {
+  margin-top: 10px;
+}
+
+.githubBtn {
+  float: left;
+  margin-right: 10px;
+}
+
+.connectBtnWrapper a {
+  padding: 2px;
+  color: rgb(202, 202, 202);
+  font-size: 30px;
+  animation-name: connectBtnFadeIn;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  animation-duration: 2s;
+  cursor: pointer;
+}
+
+.connectBtnWrapper a:visited {
+  color: rgb(202, 202, 202);
+}
+
+@keyframes connectBtnFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Category */
+.category {
+  float: left;
+  width: 40%;
+  display: grid;
+  grid-template-columns: 200px 200px;
+  grid-row: auto auto;
+  grid-column-gap: 30px;
+  grid-row-gap: 0px;
+}
+
+.aboutMe,
+.experience,
+.contact,
+.resume {
+  height: 29vh;
+  width: 30vh;
+  position: relative;
+  transition: color 0.25s ease;
+  overflow: hidden;
+
+  /* font style */
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(202, 202, 202);
+}
+
+.aboutMe:hover,
+.experience:hover,
+.contact:hover,
+.resume:hover {
+  color: #282d3c;
+  cursor: pointer;
+}
+
+.aboutMe:hover > .categoryIcon,
+.experience:hover > .categoryIcon,
+.contact:hover > .categoryIcon,
+.resume:hover > .categoryIcon {
+  color: #282d3c;
+  transition: 0.1s;
+}
+
+.aboutMe::after,
+.experience::after,
+.contact::after,
+.resume::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgb(202, 202, 202);
+  transform-origin: left;
+  transition: width 0.8s ease;
+  z-index: -1;
+}
+
+.aboutMe:hover::after,
+.experience:hover::after,
+.contact:hover::after,
+.resume:hover::after {
+  width: 100%;
+}
+
+.upperLine,
+.underLine {
+  animation-name: categoryFadeIn;
+  transform-origin: 0% 50%;
+  animation-duration: 2s;
+  border: solid rgb(202, 202, 202) 1px;
+  width: 100%;
+}
+
+.underLine {
+  position: absolute;
+  bottom: 0px;
+}
+
+@keyframes categoryFadeIn {
+  0% {
+    transform: scaleX(0.3);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+/* About Me, Experience, Contact, Resume */
+.categoryItemName {
+  padding-left: 10px;
+  animation-name: categoryItemNameFadeIn;
+  animation-duration: 2s;
+}
+
+@keyframes categoryItemNameFadeIn {
+  from {
+    margin-top: 25px;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* category button */
+.categoryIcon {
+  background-color: transparent;
+  border: none;
+  color: rgb(202, 202, 202);
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 18px;
+  animation-name: categoryItemNameFadeIn;
+  animation-duration: 2s;
+}
+
+.categoryIcon:focus {
+  outline: none;
+}
+
+.categoryIcon:hover {
+  cursor: pointer;
+}
