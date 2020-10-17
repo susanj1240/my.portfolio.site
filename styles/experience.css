@@ -1,0 +1,121 @@
+#experiencePage {
+  color: white;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+#experienceWrapper {
+  width: 80%;
+  height: 70%;
+}
+
+#experienceTitle {
+  font-size: 9vh;
+  position: absolute;
+}
+
+#experienceContentScroll {
+  height: 80vh;
+  overflow-y: scroll;
+  padding: 20px;
+}
+
+#experienceContentScroll::-webkit-scrollbar {
+  display: none;
+}
+
+#experienceContent {
+  margin-left: auto;
+  display: flex;
+  /* justify-content: flex-end; */
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 45px;
+  /* width: 65%; */
+}
+
+#experienceBlock {
+  width: 80%;
+  height: 40vh;
+  margin-top: 100px;
+  transition: 1s;
+  text-align: right;
+}
+
+#experienceBlock img {
+  object-fit: cover;
+  /* width: 70%;
+  height: 100%; */
+}
+
+#experienceBlock:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.experiencePosition {
+  margin: 2px;
+  font-size: 14px;
+}
+
+.experienceCompany {
+  margin: 2px;
+  font-size: 14px;
+}
+
+.experienceDuration {
+  font-size: 12px;
+  margin: 2px;
+  color: rgb(199, 199, 199);
+}
+
+.experienceImgWrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.experienceImgWrapper::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.experienceImgWrapper p {
+  float: left;
+  width: 40%;
+  margin-right: 20px;
+  opacity: 0;
+  font-size: 13px;
+  text-align: left;
+  /* display: inline-block; */
+}
+
+.experienceImgWrapper img {
+  float: left;
+  width: 60%;
+  /* display: inline-block; */
+}
+
+#experienceBlock:hover > .experienceImgWrapper p {
+  animation-name: descriptionShowAnimation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  line-height: 1.5;
+}
+
+@keyframes descriptionShowAnimation {
+  from {
+    transform: translateX(-20%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.experienceImgWrapper p span {
+  color: rgb(199, 199, 199);
+  font-size: 10px;
+}

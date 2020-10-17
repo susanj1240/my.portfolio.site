@@ -1,0 +1,129 @@
+/* About Me page */
+#aboutMePage {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  position: relative;
+  color: #282d3c;
+}
+#aboutMePage .container {
+  padding: 8vh 10vh;
+}
+
+#aboutMeTitle {
+  position: absolute;
+  right: 150px;
+  font-size: 9vh;
+  margin: 0;
+  opacity: 0;
+}
+
+.aboutMeFadeInLeft {
+  animation-name: aboutMeFadeInLeft;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes aboutMeFadeInLeft {
+  from {
+    /* right: 200px; */
+    transform: translateX(-10%);
+    /* opacity: 0; */
+  }
+  to {
+    /* right: 150px; */
+    transform: translateX(10%);
+    opacity: 1;
+  }
+}
+
+#aboutMeParagraph {
+  width: 70%;
+  position: absolute;
+  margin-top: 10vh;
+  font-size: 17px;
+}
+
+#aboutMeParagraph p:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+#aboutMeParagraph p:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+#aboutMeParagraph p:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.aboutMeParagraphAnimation {
+  animation-name: aboutMeParagraphAnimation;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  /* animation-delay: 0.2s; */
+  opacity: 0;
+}
+
+@keyframes aboutMeParagraphAnimation {
+  from {
+    transform: translateX(30%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(5%);
+    opacity: 1;
+  }
+}
+#education {
+  right: 150px;
+  position: absolute;
+  margin-top: 42vh;
+  display: inline;
+}
+
+#uvaImg {
+  display: inline-block;
+  width: 60vh;
+  height: auto;
+  opacity: 0;
+  animation-delay: 0.7s;
+}
+
+.collegeWrapper {
+  display: inline-block;
+  text-align: right;
+  /* margin-right: 10px; */
+}
+.collegeWrapper p {
+  margin: 0;
+  opacity: 0;
+}
+
+#college {
+  color: rgb(43, 43, 43);
+  animation-delay: 1.2s;
+}
+
+#degree,
+#collegeYear {
+  font-size: 14px;
+  color: rgb(85, 85, 85);
+  animation-delay: 1.4s;
+}
+
+.educationAnimation {
+  animation-name: educationAnimation;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes educationAnimation {
+  from {
+    transform: translateX(-10%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(20%);
+    opacity: 1;
+  }
+}

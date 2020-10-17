@@ -1,0 +1,11 @@
+#projectPage {
+  height: 100%;
+  width: 100%;
+  color: white;
+  /* position: relative; */
+}
+
+#projectTitle {
+  font-size: 9vh;
+  right: 150px;
+}

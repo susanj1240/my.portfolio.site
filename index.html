@@ -7,7 +7,11 @@
     <title>Document</title>
 
     <!-- custm css -->
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/aboutMe.css">
+    <link rel="stylesheet" href="./styles/experience.css">
+    <link rel="stylesheet" href="./styles/project.css">
+
 
     <!-- Material Icon -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -17,105 +21,285 @@
 </head>
 
 <body>
-    <div class="container">
-        <!-- Title -->
-        <h1>Hi, My Name is Susan</h1>
+    <div id="welcomePage">
+        <div class="container">
+            <!-- Title -->
+            <div class="intro">
+                <h1>Hi, My Name is Susan</h1>
 
-        <p id="myTitle">Recent Graduate of University of Virginia <br>/ Full-Stack Developer at Develop for Good</p>
-        <!-- Category: About Me, Experience, Contact -->
-        <div class="wrapper">
-            <div class="profileImgWrapper">
-                <img class="profileImg" src="profile.jpeg">
-
-                <div class="connectBtnWrapper">
-
-                    <div class="githubBtn">
-                        <a href="https://github.com/susanj1240" target="_blank">
-                            <i class="fa fa-github"></i>
-                        </a>
-                    </div>
-                    <!-- <a href="https://www.linkedin.com/in/susan-jang/" target="_blank">
-                        <i class="fa fa-github"></i>
-                    </a> -->
-
-                    <div class="linkedInBtn">
-                        <a href="https://www.linkedin.com/in/susan-jang/" target="_blank">
-                            <i class="fa fa-linkedin-square"></i>
-                        </a>
-                    </div>
-
-                </div>
+                <p id="myTitle">Recent Graduate of University of Virginia <br>/ Full-Stack Developer at Develop for Good
+                </p>
             </div>
-            <div class="category">
-                <div class="aboutMe">
-                    <div class="upperLine"></div>
-                    <p class="categoryItemName">About Me</p>
 
-                    <div class="categoryIcon">
-                        <span class="material-icons">
-                            arrow_right_alt
-                        </span>
+            <!-- Category: About Me, Experience, Contact -->
+            <div class="wrapper">
+                <div class="profileImgWrapper">
+                    <img class="profileImg" src="./image/profile.jpeg">
+
+                    <div class="connectBtnWrapper">
+
+                        <div class="githubBtn">
+                            <a href="https://github.com/susanj1240" target="_blank">
+                                <i class="fa fa-github"></i>
+                            </a>
+                        </div>
+
+                        <div class="linkedInBtn">
+                            <a href="https://www.linkedin.com/in/susan-jang/" target="_blank">
+                                <i class="fa fa-linkedin-square"></i>
+                            </a>
+                        </div>
+
+                        <!-- <div class="emailBtn">
+                            <a href="https://www.linkedin.com/in/susan-jang/" target="_blank">
+                                <i class="fa fa-linkedin-square"></i>
+                            </a>
+                        </div> -->
+
                     </div>
-
-
-                    <div class="underLine"></div>
                 </div>
-                <div class="experience">
-                    <div class="upperLine"></div>
+                <div class="category">
 
-                    <p class="categoryItemName">Experience</p>
 
-                    <div class="categoryIcon">
-                        <span class="material-icons">
-                            arrow_right_alt
-                        </span>
+                    <div class="aboutMe" onclick="goTo('aboutMePage')">
+                        <div class="upperLine"></div>
+                        <p class="categoryItemName">About Me</p>
+                        <div class="categoryIcon">
+                            <span class="material-icons">
+                                arrow_right_alt
+                            </span>
+                        </div>
+                        <div class="underLine"></div>
                     </div>
 
-                    <div class="underLine"></div>
 
-                </div>
-                <div class="contact">
-
-                    <p class="categoryItemName">Contact</p>
-
-                    <div class="categoryIcon">
-                        <span class="material-icons">
-                            arrow_right_alt
-                        </span>
+                    <div class="experience" onclick="goTo('experiencePage')">
+                        <div class="upperLine"></div>
+                        <p class="categoryItemName">Experience</p>
+                        <div class="categoryIcon">
+                            <span class="material-icons">
+                                arrow_right_alt
+                            </span>
+                        </div>
+                        <div class="underLine"></div>
                     </div>
 
-                    <div class="underLine"></div>
-
-
-                </div>
-                <div class="resume">
-
-                    <p class="categoryItemName">Resume</p>
-
-                    <div class="categoryIcon">
-                        <span class="material-icons">
-                            arrow_right_alt
-                        </span>
+                    <!-- onClick="window.open('./resume.pdf', '_blank'); return false;" -->
+                    <div class="projects" onclick="goTo('projectPage')">
+                        <p class="categoryItemName">Projects</p>
+                        <div class="categoryIcon">
+                            <span class="material-icons">
+                                arrow_right_alt
+                            </span>
+                        </div>
+                        <div class="underLine"></div>
                     </div>
 
-                    <div class="underLine"></div>
+                    <div class="contact" onclick="goTo('contactPage')">
+                        <p class="categoryItemName">Contact</p>
+                        <div class="categoryIcon">
+                            <span class="material-icons">
+                                arrow_right_alt
+                            </span>
+                        </div>
+                        <div class="underLine"></div>
+                    </div>
+
 
                 </div>
             </div>
         </div>
 
+    </div>
 
+    <!-- About Me page -->
+    <div id="aboutMePage">
+        <div class="container ">
+            <p id="aboutMeTitle">About Me</p>
+            <div id="aboutMeParagraph">
+                <p>
+                    Hello, I am Susan, a software developer located in Ashburn, VA.
+                </p>
+
+                <p>
+                    I am passionate about creating websites with good user experience and beneficial features. My goal
+                    is to
+                    build an application that has an easy-to-use yet beautiful interface and useful services that can
+                    improve one's quality of life.
+                </p>
+
+                <p>
+                    I have graduated from the University of Virginia in August 2020 and currently seeking a position at
+                    a
+                    software developer/web developer. In the meantime, I am learning web technologies such as ionic.
+                </p>
+            </div>
+
+            <div id="education">
+                <div class="collegeWrapper">
+                    <p id="college">University of Virginia</p>
+                    <p id="degree">B.A. Computer Science</p>
+                    <p id="collegeYear">2017 - 2020</p>
+                </div>
+                <img src="./image/uva.jpg" id="uvaImg">
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- experience page -->
+    <div id="experiencePage">
+        <div class="container">
+            <div class="experienceWrapper">
+                <p id="experienceTitle">Experience</p>
+
+                <div id="experienceContentScroll">
+                    <div id="experienceContent">
+
+                        <div id="experienceBlock">
+
+                            <p class="experiencePosition">Software Developer Internship</p>
+                            <p class="experienceCompany">Fasoo</p>
+                            <p class="experienceDuration">May — Aug 2019</p>
+                            <div class="experienceImgWrapper">
+                                <p>Developed a real-time collaborating web application using WebRTC. The main goal is to
+                                    enhance communication between the users. Participated in analyzing, planning,
+                                    developing, testing, and deployment of the application. Functionalities include
+                                    video chat, messaging, and file transfer.
+                                    <br><br>
+                                    <span>JavaScript &nbsp HTML &nbsp CSS &nbsp Node.JS &nbsp WebRTC &nbsp
+                                        Materialize</span>
+                                </p>
+                                <img src="./image/fasoo.png">
+
+                            </div>
+                        </div>
+                        <div id="experienceBlock">
+                            <p class="experiencePosition">Living Classroom</p>
+                            <p class="experienceDuration">Oct — Nov 2019</p>
+
+                            <div class="experienceImgWrapper">
+                                <p>Living Classroom is a computer science capstone project done by my teammates(Rahat
+                                    Maini, Aron Taylor, Adam Iyob). We designed and built a tool for analytics and
+
+                                    classrooms, a database storing account, notes, and audio metadata, and corresponding
+                                    metrics.
+                                    <br><br>
+                                    <span>JavaScript &nbsp
+                                        HTML &nbsp
+                                        CSS &nbsp
+                                        Boostrap &nbsp
+                                        MySQL &nbsp
+                                        PHP &nbsp
+                                        Ajax</span>
+                                </p>
+                                <img src="./image/livingclassroom.png">
+                            </div>
+                        </div>
+                        <div id="experienceBlock">
+                            <p class="experiencePosition">HoosHungry</p>
+                            <p class="experienceDuration">Jan — May 2020</p>
+
+                            <div class="experienceImgWrapper">
+                                <p>Hoos Hungry is a web application that allows users to view and review restaurants in
+                                    Charlottesville. This was the main project done in my Web Programming course at UVA.
+
+                                    <br><br>
+                                    <span>JavaScript &nbsp
+                                        HTML &nbsp
+                                        CSS &nbsp
+                                        Angular &nbsp
+                                        Boostrap &nbsp
+                                        MySQL &nbsp
+                                        PHP &nbsp
+                                        Ajax</span>
+                                </p>
+                                <img src="./image/hooshungry_main.png">
+                            </div>
+                        </div>
+                        <div id="experienceBlock">
+                            <p class="experiencePosition">KSEA (Korean Student Engineer Association)</p>
+                            <div class="experienceImgWrapper">
+                                <p>KSEA is a Korean American Scientists and Engineers Association club at the University
+                                    of Virginia. I manage the website with HTML.
+
+                                    My role includes updating the calendar and any other update needed on the webpage.
+
+                                    <br><br>
+                                    <span>HTML</span>
+                                </p>
+                                <img src="./image/ksea.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- project page -->
+    <div id="projectPage">
+        <div class="container">
+            <p id="projectTitle">Project</p>
+
+            <p>To be Filled...</p>
+
+        </div>
+    </div>
+
+
+    <div id="contactPage">
+        <div class="container">
+            <p>Contact</p>
+
+
+        </div>
+    </div>
+    <!-- Side Navigation -->
+    <div id="sideNavbar">
+        <ul>
+            <li>
+                <button class="homeBtn" onclick="goTo('welcomePage')">
+                    <span class="material-icons">
+                        keyboard_arrow_up
+                    </span>
+                </button>
+            </li>
+            <li>
+                <button class="navbarBtn" onclick="goTo('aboutMePage')">
+                    <div class="dot">
+                        <div id="aboutMeDot" class="dot-click"></div>
+                    </div>
+                </button>
+            </li>
+            <li>
+                <button class="navbarBtn" onclick="goTo('experiencePage')">
+                    <div class="dot">
+                        <div id="experienceDot" class="dot-click"></div>
+                    </div>
+
+                </button>
+            </li>
+            <li>
+                <button class="navbarBtn" onclick="goTo('projectPage')">
+                    <div class="dot">
+                        <div id="projectDot" class="dot-click"></div>
+                    </div>
+
+                </button>
+            </li>
+
+        </ul>
     </div>
 
     <p id="credit">Created by Susan Jang & Desgin Inspired by <a target="_blank"
-            href="https://dribbble.com/shots/14387463-IBM-Research-Website-Hover-Animation">Zhenya Rynzhuk</a></p>
+            href="https://dribbble.com/shots/14387463-IBM-Research-Website-Hover-Animation">Zhenya Rynzhuk</a>
+    </p>
 
-    <!-- categoryBtn click event handler -->
-    <script>
-        function goTo() {
-            console.log("hi");
-        }
-    </script>
+    <!-- Custom JavaScript -->
+    <script src="main.js"></script>
 </body>
 
 
